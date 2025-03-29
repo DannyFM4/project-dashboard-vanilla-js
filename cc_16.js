@@ -28,8 +28,6 @@ function fetchProductsThen() {
         });
 };
 
-// calls the function
-fetchProductsThen();
 
 // Task 3: Fetch Products with async/await
 
@@ -86,6 +84,10 @@ function handleError(error) {
     throw error;
 };
 
+
+// Task 6: Call Your Fetch Functions
+
 // calls the function
+fetchProductsThen();
 fetchProductsAsync();
 
