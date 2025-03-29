@@ -28,5 +28,27 @@ function fetchProductsThen() {
         });
 };
 
+// calls the function
 fetchProductsThen();
 
+// Task 3: Fetch Products with async/await
+
+async function fetchProductsAsync() {
+    try {
+        const respond = await fetch(BASE_URL);
+
+        if (!respond.ok) {
+            throw new Error(`Error: ${respond.status}`);
+        }
+
+        const products = await respond.json();
+        displayProducts(products);
+    } catch (error) {
+        handleError(error);        
+    };
+
+    
+};
+
+
+fetchProductsAsync();
