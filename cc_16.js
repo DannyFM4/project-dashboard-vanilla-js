@@ -57,19 +57,24 @@ async function fetchProductsAsync() {
 
 // Task 4: Display the Products
 
+
+// creates a function to display the product images
 function displayProducts(products) {
+    // grabs the container by using its ID
     const container = document.getElementById('product-container');
 
+    // uses try and catch to display the product images
     try {
-
+        // goes through the first 5 products
         products.slice(0,5).forEach(product => {
-            const div = document.createElement('div');
+            const div = document.createElement('div'); //creates a div
+            // makes the inner html content the name, price, and image
             div.innerHTML = `<h3>Product: ${product.fields.name}</h3><p>Price: $${product.fields.price}</p><img src="${product.fields.image[0].url}" alt="${product.fields.image.url}" />`;
-            container.appendChild(div);
+            container.appendChild(div); // appends the container by adding the div
         });
-    } catch (error) {
+    } catch (error) { // display error message if there is something wrong
         container.innerHTML = `<p style="color: red;">Failed to load posts: ${error.message}</p>`;
-    }
+    };
 
     
 };
