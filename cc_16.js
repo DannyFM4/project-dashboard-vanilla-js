@@ -33,22 +33,27 @@ fetchProductsThen();
 
 // Task 3: Fetch Products with async/await
 
+//creates an async function that uses try and catch to grab the url and runs helper functions
 async function fetchProductsAsync() {
     try {
+        //grabs the url
         const respond = await fetch(BASE_URL);
 
+        //uses if statement to show status if there is an error
         if (!respond.ok) {
             throw new Error(`Error: ${respond.status}`);
         }
 
+        //assigns the variable the respond json
         const products = await respond.json();
-        displayProducts(products);
+        displayProducts(products); // call the function
     } catch (error) {
+        //sends the catch to a helper function
         handleError(error);        
     };
 
     
 };
 
-
+// calls the function
 fetchProductsAsync();
