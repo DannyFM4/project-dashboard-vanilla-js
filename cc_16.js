@@ -80,6 +80,10 @@ function displayProducts(products) {
 };
 
 
+function handleError(error) {
+    console.log('An error occured', error.message);
+    throw error;
+};
 
 // calls the function
 fetchProductsAsync();
