@@ -79,8 +79,9 @@ function displayProducts(products) {
     
 };
 
-
+// creates function to handle the error
 function handleError(error) {
+    //logs the error message in the console
     console.log('An error occured', error.message);
     throw error;
 };
