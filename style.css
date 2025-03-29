@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: khaki;
+}
+h1 {
+    text-align: center;
+}
+
+#product-div {
+    margin-bottom: 20px;
+    
+}
+.product-div{
+    display: inline-block;
+    padding: 5px;
+    margin: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: khaki;
+}
+
+.prodImage {
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+}

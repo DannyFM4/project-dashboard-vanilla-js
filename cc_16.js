@@ -66,8 +66,9 @@ function displayProducts(products) {
         // goes through the first 5 products
         products.slice(0,5).forEach(product => {
             const div = document.createElement('div'); //creates a div
+            div.classList.add('product-div');
             // makes the inner html content the name, price, and image
-            div.innerHTML = `<h3>Product: ${product.fields.name}</h3><p>Price: $${product.fields.price}</p><img src="${product.fields.image[0].url}" alt="${product.fields.image.url}" />`;
+            div.innerHTML = `<h3>Product: ${product.fields.name}</h3><p>Price: $${product.fields.price}</p><img src="${product.fields.image[0].url}" alt="${product.fields.image.url}" class='prodImage'/>`;
             container.appendChild(div); // appends the container by adding the div
         });
     } catch (error) { // display error message if there is something wrong
